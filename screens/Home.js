@@ -59,10 +59,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
     justifyContent: 'center',
-    // backgroundImage: `url("https://pbs.twimg.com/profile_images/758612085194432512/UwFUDaB4_400x400.jpg")`,
-    //backgroundRepeat: 'no-repeat',
 
   },
   button: {
