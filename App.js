@@ -13,6 +13,8 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import SuratKeluarPublik from "./screens/SuratKeluarPublik";
 import SuratMasukPublik from "./screens/SuratMasukPublik";
+import DetailSuratMasuk from "./screens/DetailSuratMasuk";
+import DetailSuratKeluar from "./screens/DetailSuratKeluar";
 
 
 const Stack = createNativeStackNavigator();
@@ -49,6 +51,20 @@ function TabStack() {
           ),
         }}
       />
+      <Tab.Screen name="DetailSuratMasuk" component={DetailSuratMasuk}  
+        options={{
+          tabBarButton: (props) => null, //like this
+          tabBarLabelStyle: { display: 'none' },
+          tabBarIconStyle: { display: "none"}
+        }}
+      />
+      <Tab.Screen name="DetailSuratKeluar" component={DetailSuratKeluar}  
+        options={{
+          tabBarButton: (props) => null, //like this
+          tabBarLabelStyle: { display: 'none' },
+          tabBarIconStyle: { display: "none"}
+        }}
+      />
     </Tab.Navigator>
   );
 }
@@ -57,6 +73,7 @@ export default function App({ navigation }) {
   return (
     <NativeBaseProvider>
     <PaperProvider>
+
       <NavigationContainer>
         <Stack.Navigator 
           screenOptions={{
