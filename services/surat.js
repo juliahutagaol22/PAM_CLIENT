@@ -19,10 +19,20 @@ const downloadFileSuratKeluar = (surat) => {
   return API_URL + `download_file_suratKeluar/${surat}`;
 }
 
+const getDataSuratMasukById = (id) => {
+   return axios.get(API_URL + `get_data_byId_suratMasuk/${id}`)
+}
+
+const getDataSuratKeluarById = (id) => {
+   return axios.get(API_URL + `get_data_byId_suratKeluar/${id}`)
+}
+
 // eslint-disable-next-line
 export default {
   getDataSuratMasuk,
   getDataSuratKeluar,
   downloadFileSuratMasuk,
-  downloadFileSuratKeluar
+  downloadFileSuratKeluar,
+  getDataSuratMasukById,
+  getDataSuratKeluarById
 };
