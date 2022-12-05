@@ -18,7 +18,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <ImageBackground source={{ uri: 'https://image.shutterstock.com/image-photo/blurred-interior-public-library-books-260nw-1896648337.jpg' }} resizeMode="cover" style={styles.image}>
         <Text style={styles.title}>Sistem Arsip Surat</Text>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={dashboard}
         >
@@ -26,7 +26,7 @@ export default function Home({ navigation }) {
           <Text style={styles.text}>Dashboard Admin</Text>
           <Text>Halaman Awal</Text>
 
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity
           style={styles.button}
