@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { NativeBaseProvider } from "native-base";
-import { Provider as PaperProvider } from 'react-native-paper'; 
+import { Provider as PaperProvider } from 'react-native-paper';
 
 import Home from "./screens/Home";
 import Login from "./screens/Login";
@@ -27,7 +27,7 @@ function TabStack() {
         headerShown: false
       }}
     >
-      <Tab.Screen name="Home" component={Home}  
+      <Tab.Screen name="Home" component={Home}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: () => (
@@ -35,7 +35,7 @@ function TabStack() {
           ),
         }}
       />
-      <Tab.Screen name="SuratMasukPublik" component={SuratMasukPublik} 
+      <Tab.Screen name="SuratMasukPublik" component={SuratMasukPublik}
         options={{
           tabBarLabel: 'Surat Masuk',
           tabBarIcon: () => (
@@ -43,7 +43,7 @@ function TabStack() {
           ),
         }}
       />
-      <Tab.Screen name="SuratKeluarPublik" component={SuratKeluarPublik} 
+      <Tab.Screen name="SuratKeluarPublik" component={SuratKeluarPublik}
         options={{
           tabBarLabel: 'Surat Keluar',
           tabBarIcon: () => (
@@ -53,14 +53,14 @@ function TabStack() {
       />
       <Tab.Screen name="DetailSuratMasuk" component={DetailSuratMasuk}  
         options={{
-          tabBarButton: (props) => null, //like this
+          tabBarButton: (props) => null,
           tabBarLabelStyle: { display: 'none' },
           tabBarIconStyle: { display: "none"}
         }}
       />
       <Tab.Screen name="DetailSuratKeluar" component={DetailSuratKeluar}  
         options={{
-          tabBarButton: (props) => null, //like this
+          tabBarButton: (props) => null,
           tabBarLabelStyle: { display: 'none' },
           tabBarIconStyle: { display: "none"}
         }}
@@ -72,21 +72,20 @@ function TabStack() {
 export default function App({ navigation }) {
   return (
     <NativeBaseProvider>
-    <PaperProvider>
-
-      <NavigationContainer>
-        <Stack.Navigator 
-          screenOptions={{
-            headerShown: false,
-          }}
-          initialRouteName="HomeStack"
-        >
-          <Stack.Screen name="HomeStack" component={TabStack} />
-          <Stack.Screen name="Login" component={Login} />
-        </Stack.Navigator>
-      </NavigationContainer>
-      <StatusBar style="auto" />
-    </PaperProvider>
+      <PaperProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}
+            initialRouteName="HomeStack"
+          >
+            <Stack.Screen name="HomeStack" component={TabStack} />
+            <Stack.Screen name="Login" component={Login} />
+          </Stack.Navigator>
+        </NavigationContainer>
+        <StatusBar style="auto" />
+      </PaperProvider>
     </NativeBaseProvider>
   );
 }
