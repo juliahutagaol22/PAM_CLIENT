@@ -50,6 +50,7 @@ function TabStack() {
         }}
       />
     </Tab.Navigator>
+
   );
 }
 
