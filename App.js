@@ -79,7 +79,7 @@ export default function App({ navigation }) {
             screenOptions={{
               headerShown: false,
             }}
-            initialRouteName="HomeStack"
+            initialRouteName="Login"
           >
             <Stack.Screen name="HomeStack" component={TabStack} />
             <Stack.Screen name="Login" component={Login} />

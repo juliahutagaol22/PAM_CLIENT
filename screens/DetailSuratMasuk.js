@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, TouchableOpacity, TextInput } from 'react-native';
 import { DataTable, Appbar, Searchbar, Card, Title, Paragraph, TouchableRipple, Button } from 'react-native-paper';
-// import ReactNativeBlobUtil from 'react-native-blob-util'
-import {PDFView} from 'react-native-view-pdf';
+
 import {Text, VStack, HStack } from "native-base";
 import suratServices from "../services/surat";
 
