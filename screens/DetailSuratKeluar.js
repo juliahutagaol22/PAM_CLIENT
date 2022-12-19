@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, TextInput, Linking } from 'react-native';
 import { DataTable, Appbar, Searchbar, Card, Title, Paragraph, TouchableRipple, Button } from 'react-native-paper';
 // import ReactNativeBlobUtil from 'react-native-blob-util'
 import {Text, VStack, HStack } from "native-base";
@@ -89,7 +89,9 @@ export default function DetailSuratMasuk({ navigation, route }) {
           <Paragraph>{surat.perihal}</Paragraph>
         </Card.Content>
         <Card.Actions>
-          <Button icon="download" onPress={() => {}}>Dowload</Button>
+          <Button icon="download" onPress={() => { Linking.openURL(`http://localhost:8000/arsip_surat/download_file_suratKeluar/${surat.file_pdf}`) }}>
+            Dowload
+          </Button>
         </Card.Actions>
       </Card>
     </View>
